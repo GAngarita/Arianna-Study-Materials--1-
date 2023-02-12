@@ -8,7 +8,7 @@ public class GCF {
             System.out.println();
             
             generateRandomNumbers();
-            gcf();
+            problem();
 
             System.out.println("\nTo continue, enter 1\nTo return to the main menu, enter 0");
             userCutoff = Program.input.nextInt();
@@ -20,7 +20,7 @@ public class GCF {
     private static int number1;
     private static int number2;
     
-    public static void generateRandomNumbers() {
+    private static void generateRandomNumbers() {
         number1 = (int)(Math.random()*10 +1) * (int)(Math.random()*10 +1);
         number2 = (int)(Math.random()*10 +1) * (int)(Math.random()*10 +1);
 
@@ -31,14 +31,14 @@ public class GCF {
         }
     }
 
-    public static void gcf() {
+    private static void problem() {
         System.out.println("What is the GCF of " + number1 + " and " + number2);
         int num = Program.input.nextInt();
 
         checkSolution(num); 
     }
 
-    public static void checkSolution(int num) {
+    private static void checkSolution(int num) {
         // recursion GCF
         int GCF = 0;
         
@@ -48,12 +48,24 @@ public class GCF {
             }
         }
 
-        if(num == GCF) {
+        if(num == gcd(number1, number2)) {
             System.out.println("Correct!");
         }
         else {
             System.out.println("Incorrect :(");
             System.out.println("The correct answer is " + GCF);
         }
+    }
+
+    public static int gcd(int a, int b) {
+        int result = Math.min(a, b);
+        while (result > 0) {
+            if (a % result == 0 && b % result == 0) {
+                break;
+            }
+            result--;
+        }
+        return result;
+
     }
 }

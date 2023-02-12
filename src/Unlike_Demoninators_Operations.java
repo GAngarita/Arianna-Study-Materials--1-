@@ -21,16 +21,173 @@ public class Unlike_Demoninators_Operations {
 
     private static void category(int categoryChoice) {
         if(categoryChoice == 1) {
-
+            add();
         }
         else if(categoryChoice == 2) {
-
+            sub();
         }
         else if(categoryChoice == 3) {
-
+            mult();
         }
         else if(categoryChoice == 4) {
+            div(); 
+        }
+    }
 
+    private static int numberGen() {
+        int number = (int)(Math.random()*10 + 1); 
+        return number; 
+    }
+
+    private static void add() {
+        int numerator = numberGen(); 
+        int denominator = numberGen(); 
+        int numerator2 = numberGen(); 
+        int denominator2 = numberGen(); 
+
+        while(denominator == denominator2) {
+            denominator2 = numberGen(); 
+        }
+        
+        while(numerator == denominator || numerator > denominator) {
+            numerator = numberGen(); 
+        }
+        
+        while(numerator2 == denominator2 || numerator2 > denominator2 || numerator2 > numerator) {
+            numerator2 = numberGen(); 
+        }
+
+        
+        Fraction fraction1 = new Fraction(numerator, denominator);
+        Fraction fraction2 = new Fraction(numerator2, denominator2); 
+
+        Fraction fraction3 = fraction1.addition(fraction2);
+        System.out.println("Solve: " + fraction1.getNumerator() + "/" + fraction1.getDenominator() + " + " + fraction2.getNumerator() + "/" + fraction2.getDenominator()); 
+
+        int correctNumerator = fraction3.getNumerator();
+        int correctDenominator = fraction3.getDenominator(); 
+
+        System.out.println("Enter your answer (number/number format)");
+        Program.input.nextLine(); 
+        String userAnswer = Program.input.nextLine(); 
+
+        checkAnswer(correctNumerator, correctDenominator, userAnswer); 
+    }
+
+    private static void sub() {
+        int numerator = numberGen() * 2; 
+        int denominator = numberGen(); 
+        int numerator2 = numberGen(); 
+        int denominator2 = numberGen(); 
+
+        while(denominator == denominator2) {
+            denominator2 = numberGen(); 
+        }
+        
+        while(numerator == denominator || numerator > denominator) {
+            numerator = numberGen() * 2; 
+        }
+        
+        while(numerator2 == denominator2 || numerator2 > denominator2 || numerator2 > numerator) {
+            numerator2 = numberGen(); 
+        }
+        //replace all while loops to check for ALL conditions!! 
+
+        Fraction fraction1 = new Fraction(numerator, denominator);
+        Fraction fraction2 = new Fraction(numerator2, denominator2); 
+
+        Fraction fraction3 = fraction1.subtraction(fraction2);
+        System.out.println("Solve: " + fraction1.getNumerator() + "/" + fraction1.getDenominator() + " - " + fraction2.getNumerator() + "/" + fraction2.getDenominator());
+
+        int correctNumerator = fraction3.getNumerator();
+        int correctDenominator = fraction3.getDenominator(); 
+
+        System.out.println("Enter your answer (number/number format)");
+        Program.input.nextLine(); 
+        String userAnswer = Program.input.nextLine(); 
+
+        checkAnswer(correctNumerator, correctDenominator, userAnswer); 
+    }
+
+    private static void mult() {
+        int numerator = numberGen(); 
+        int denominator = numberGen(); 
+        int numerator2 = numberGen(); 
+        int denominator2 = numberGen(); 
+
+        while(denominator == denominator2) {
+            denominator2 = numberGen(); 
+        }
+        
+        while(numerator == denominator || numerator > denominator) {
+            numerator = numberGen(); 
+        }
+        
+        while(numerator2 == denominator2 || numerator2 > denominator2 || numerator2 > numerator) {
+            numerator2 = numberGen(); 
+        }
+
+        Fraction fraction1 = new Fraction(numerator, denominator);
+        Fraction fraction2 = new Fraction(numerator2, denominator2); 
+
+        Fraction fraction3 = fraction1.multiplying(fraction2);
+        System.out.println("Solve: " + numerator+"/"+denominator+" x "+numerator2+"/"+denominator2);
+
+
+        int correctNumerator = fraction3.getNumerator();
+        int correctDenominator = fraction3.getDenominator();
+
+        System.out.println("Enter your answer (number/number format)");
+        Program.input.nextLine(); 
+        String userAnswer = Program.input.nextLine(); 
+
+        checkAnswer(correctNumerator, correctDenominator, userAnswer); 
+    }
+
+    private static void div() {
+        int numerator = numberGen(); 
+        int denominator = numberGen(); 
+        int numerator2 = numberGen(); 
+        int denominator2 = numberGen(); 
+
+        while(denominator == denominator2) {
+            denominator2 = numberGen(); 
+        }
+        
+        while(numerator == denominator || numerator > denominator) {
+            numerator = numberGen(); 
+        }
+        
+        while(numerator2 == denominator2 || numerator2 > denominator2 || numerator2 > numerator) {
+            numerator2 = numberGen(); 
+        }
+
+        Fraction fraction1 = new Fraction(numerator, denominator);
+        Fraction fraction2 = new Fraction(numerator2, denominator2); 
+
+        Fraction fraction3 = fraction1.dividing(fraction2);
+        System.out.println("Solve: " + fraction1.getNumerator() + "/" + fraction1.getDenominator() + " / " + fraction2.getNumerator() + "/" + fraction2.getDenominator());
+
+        int correctNumerator = fraction3.getNumerator();
+        int correctDenominator = fraction3.getDenominator(); 
+
+        System.out.println("Enter your answer (number/number format)");
+        Program.input.nextLine(); 
+        String userAnswer = Program.input.nextLine(); 
+
+        checkAnswer(correctNumerator, correctDenominator, userAnswer); 
+    }
+
+    private static void checkAnswer(int numerator, int denominator, String userAns) {
+        int userNum = Integer.parseInt(userAns.substring(0,userAns.indexOf("/"))); 
+        int userDen = Integer.parseInt(userAns.substring(userAns.indexOf("/") + 1));
+
+        if(userNum == numerator && userDen == denominator) {
+            System.out.println("Correct!");
+        }
+        else {
+            System.out.println("Incorrect :("); 
+            System.out.println("Correct answer: " + numerator + "/" + denominator); 
         }
     }
 }

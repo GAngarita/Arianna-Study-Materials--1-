@@ -65,10 +65,10 @@ public class PEDMAS {
         System.out.println("Enter your answer: ");
         int userAnswer = Program.input.nextInt();
         
-        checkAnswer(userAnswer);
+        checkSolution(userAnswer);
     }
     
-    private static void checkAnswer(int userAnswer) {
+    private static void checkSolution(int userAnswer) {
         // take care of all 4 situations
         int correctAnswer;
         

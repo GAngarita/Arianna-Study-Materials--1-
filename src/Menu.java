@@ -10,6 +10,7 @@ public class Menu {
         System.out.println("6. Adding, Subtracting, Multiplying and Dividing Mixed Numbers");
         System.out.println("7. Adding, Subtracting, Multipling and Dividing Uncommon Denominators");
         System.out.println("8. Simplify Fractions");
+        System.out.println("9. Variable Operations");
         
         System.out.println();
         System.out.println("Enter your option (1-8): ");
@@ -38,6 +39,9 @@ public class Menu {
         }
         else if(topicOption == 8) {
             Simplify.runProgram();
+        }
+        else if(topicOption == 9){
+            Variable_Operations.runProgram();
         }
     }
 }

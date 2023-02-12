@@ -1,10 +1,6 @@
 public class Decimal_Operations {
     public static void runProgram() {
         // Topic: Addition, Subtracting, Multiplying and Dividing Decimals
-        // Addition Ex: 32.53 + 25.34, what is the added decimal? 
-        // Subtraction Ex: 52.53 - 37.24 what is the subtracted decimal?
-        // Multiplcation Ex:  
-        // Division Ex: 
         // Randomly generated numbers and rounded decimals to hundredths place if neccessary and compares to the answer 
         int userCutoff = 1; 
         while (userCutoff == 1) {
