@@ -6,6 +6,7 @@ public class Mixed_Fractions_Operations {
         while (userCutoff == 1) {
             System.out.println("Adding, Subtracting, Multiplying, and Dividing Mixed Numbers");        
             System.out.println();
+            
             System.out.println("Pick a category:");
             System.out.println("1. Adding \n2. Subtracting\n3. Multiplying\n4. Dividing\n"); 
             int categoryChoice = Program.input.nextInt();
@@ -19,40 +20,18 @@ public class Mixed_Fractions_Operations {
         Menu.startProgram();
     }
 
-    private static void category(int categoryChoice) {
-        generateNumbers();
-        
+    private static void category(int categoryChoice) {        
         if(categoryChoice == 1) {
-            addition();
+            add();
         }
         else if(categoryChoice == 2) {
-            subtraction(); 
+            sub(); 
         }
         else if(categoryChoice == 3) {
-            multiplying(); 
+            mult(); 
         }
         else if(categoryChoice == 4) {
-            dividing(); 
+            div(); 
         }
-    }
-
-    private static void generateNumbers() {
-    
-    }
-
-    private static void addition() {
-        
-    }
-
-    private static void subtraction() {
-        
-    }
-
-    public static void multiplying() {
-        
-    }
-
-    public static void dividing() {
-        
     }
 }
