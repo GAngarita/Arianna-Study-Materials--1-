@@ -39,6 +39,7 @@ public class GCF {
     }
 
     public static void checkSolution(int num) {
+        // recursion GCF
         int GCF = 0;
         
         for(int i = 1; i <= number1; i++) {

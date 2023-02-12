@@ -9,9 +9,10 @@ public class Menu {
         System.out.println("5. PEMDAS");
         System.out.println("6. Adding, Subtracting, Multiplying and Dividing Mixed Numbers");
         System.out.println("7. Adding, Subtracting, Multipling and Dividing Uncommon Denominators");
+        System.out.println("8. Simplify Fractions");
         
         System.out.println();
-        System.out.println("Enter your option (1-7): ");
+        System.out.println("Enter your option (1-8): ");
         int topicOption = Program.input.nextInt(); 
                 
         if(topicOption == 1) {
@@ -34,6 +35,9 @@ public class Menu {
         }
         else if(topicOption == 7) {
             Unlike_Demoninators_Operations.runProgram();
+        }
+        else if(topicOption == 8) {
+            Simplify.runProgram();
         }
     }
 }

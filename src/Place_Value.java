@@ -1,16 +1,17 @@
 public class Place_Value {
-    
     // Topic: Place Value
     // Ex: 6278.345, what is the place value of 7, it is the tens place
     // Randomly generated number and no duplicate numbers and ask user what the place is of the number and compare the answer
+    
     public static void runProgram() {
-        System.out.println("Place Value");
-        System.out.println();
-        
         int userCutoff = 1;
         while (userCutoff == 1) {
+            System.out.println("Place Value: ");
+            System.out.println();
+            
             double num = generateRandomDouble();
             placeValue(num);
+            
             System.out.println("\nTo continue, enter 1\nTo return to the main menu, enter 0");
             userCutoff = Program.input.nextInt();
         }
