@@ -11,9 +11,10 @@ public class Menu {
         System.out.println("7. Adding, Subtracting, Multipling and Dividing Uncommon Denominators");
         System.out.println("8. Simplify Fractions");
         System.out.println("9. Variable Operations");
+        System.out.println("10. Solve for the variable"); 
         
         System.out.println();
-        System.out.println("Enter your option (1-8): ");
+        System.out.println("Enter your option (1-10): ");
         int topicOption = Program.input.nextInt(); 
                 
         if(topicOption == 1) {
@@ -42,6 +43,9 @@ public class Menu {
         }
         else if(topicOption == 9){
             Variable_Operations.runProgram();
+        }
+        else if(topicOption == 10) {
+            Solve_For_X.runProgram(); 
         }
     }
 }
