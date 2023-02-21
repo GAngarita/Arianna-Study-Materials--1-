@@ -44,7 +44,7 @@ public class Variable_Operations {
         int num3 = numberGen(); 
         int num4 = numberGen(); 
 
-        System.out.println("Evaluate the following problem: (2x + 2y format: spaces included!)");
+        System.out.println("Evaluate the following problem: 2x + 2y format: spaces included!");
         System.out.println(num1+"x + "+num2+"y + "+num3+"x + "+num4+"y"); 
         String userAns = Program.input.nextLine(); 
 
@@ -72,7 +72,7 @@ public class Variable_Operations {
             num4 = numberGen(); 
         }
 
-        System.out.println("Evaluate the following problem: (2x - 2y format: spaces included!)"); 
+        System.out.println("Evaluate the following problem: 2x - 2y format: spaces included!"); 
         System.out.println(num1+"x - "+num2+"y - "+num3+"x - "+num4+"y"); 
         String userAns = Program.input.nextLine(); 
 
@@ -95,7 +95,7 @@ public class Variable_Operations {
         //even operation means addition in the parenthesis - I want to expand on this is the future with more variables
         //and multilpe different operations but this will do for now - this is just framework
         if(operation % 2 == 0) {
-            System.out.println("Evaluate the following problem: (2x - 2y format: spaces included!)"); 
+            System.out.println("Evaluate the following problem: 2x - 2y format: spaces included!"); 
             System.out.println(multiplier+"("+num1+"x + "+num2+"y)"); 
             String userAns = Program.input.nextLine(); 
 
