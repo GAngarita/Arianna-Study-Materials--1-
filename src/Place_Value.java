@@ -89,7 +89,7 @@ public class Place_Value {
         int placeValue = (int)(Math.random()*7);
 
         // Asking the user for what the place value of said number is
-        System.out.println("What is the place value of " + numArray[placeValue] + " in the number " + num + "? Choose a value between 1 - 7");
+        System.out.println("What is the place value of " + numArray[placeValue] + " in the number " + num + "?");
         System.out.println("thousands place");
         System.out.println("hundreds place");
         System.out.println("tens place");
