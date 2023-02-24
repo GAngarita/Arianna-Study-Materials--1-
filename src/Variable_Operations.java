@@ -7,7 +7,7 @@ public class Variable_Operations {
             System.out.println("Variable Operations");        
             System.out.println();
             System.out.println("Pick a Category:");
-            System.out.println("1. Addition\n2.Subtraction\n3.Distribution"); 
+            System.out.println("1. Addition\n2. Subtraction\n3. Distribution"); 
             int choice = Program.input.nextInt(); 
             Program.input.nextLine(); // clearing buffer!! 
 
