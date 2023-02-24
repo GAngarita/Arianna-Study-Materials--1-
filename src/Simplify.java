@@ -55,7 +55,7 @@ public class Simplify {
     }
 
     private static void checkSolution(int userNumerator, int userDenominator) {
-        System.out.println("The gcd is " + gcd);
+       // System.out.println("The gcd is " + gcd);
         numerator /= gcd;
         denominator /= gcd;
         
