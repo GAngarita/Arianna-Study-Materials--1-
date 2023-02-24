@@ -4,12 +4,13 @@ public class Solve_For_X {
 
         int userCutoff = 1;
         while (userCutoff == 1) {
-            System.out.println("Solve for X");        
+            System.out.println("Solve for X: ");        
             System.out.println();
             System.out.println("Pick a Category:");
             System.out.println("1. Addition\n2. Substitution\n3. Multiplication\n4. Division");
             int categoryPick = Program.input.nextInt(); 
-            
+            System.out.println();
+
             Category(categoryPick); 
             
 
@@ -142,6 +143,7 @@ public class Solve_For_X {
         }
         else {
             System.out.println("Incorrect :("); 
+            System.out.println("The correct answer is " + correct);
         }
     }
 }

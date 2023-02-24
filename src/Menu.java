@@ -16,6 +16,7 @@ public class Menu {
         System.out.println();
         System.out.println("Enter your option (1-10): ");
         int topicOption = Program.input.nextInt(); 
+        System.out.println();
                 
         if(topicOption == 1) {
             Place_Value.runProgram();

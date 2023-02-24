@@ -5,7 +5,7 @@ public class PEDMAS {
         
         int userCutOff = 1;
         while (userCutOff == 1) {
-            System.out.println("PEMDAS");        
+            System.out.println("PEMDAS: ");        
             System.out.println();
             
             firstOperation = randomizeOperation();
@@ -16,6 +16,8 @@ public class PEDMAS {
             System.out.println("\nTo continue, enter 1\nTo return to the main menu, enter 0");
             userCutOff = Program.input.nextInt();
         }
+
+        Menu.startProgram();
     }
 
     private static int number1; // 1st number in the example
@@ -79,6 +81,7 @@ public class PEDMAS {
             correctAnswer = number5 - number6;
         }
         
+        System.out.println();
         if(userAnswer == correctAnswer) {
             System.out.println("Correct!");
         }

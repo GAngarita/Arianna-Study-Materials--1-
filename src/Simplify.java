@@ -4,7 +4,7 @@ public class Simplify {
 
         int userCutoff = 1;
         while (userCutoff == 1) {
-            System.out.println("Simplfy Fractions");        
+            System.out.println("Simplfy Fractions: ");        
             System.out.println();
 
             simplify();

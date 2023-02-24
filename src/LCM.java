@@ -4,7 +4,7 @@ public class LCM {
 
         int userCutoff = 1;
         while (userCutoff == 1) {
-            System.out.println("LCM");        
+            System.out.println("Least Common Multiple:");        
             System.out.println();
             
             generateRandomNumbers();

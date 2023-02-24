@@ -4,7 +4,7 @@ public class Mixed_Fractions_Operations {
 
         int userCutoff = 1;
         while (userCutoff == 1) {
-            System.out.println("Adding, Subtracting, Multiplying, and Dividing Mixed Numbers");        
+            System.out.println("Adding, Subtracting, Multiplying, and Dividing Mixed Numbers: ");        
             System.out.println();
             
             System.out.println("Pick a category:");
