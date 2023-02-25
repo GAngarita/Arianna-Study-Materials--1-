@@ -54,18 +54,17 @@ public class Mixed_Fractions_Operations {
             denominator2 = numberGen(); 
         }
         
-        while(numerator == denominator || numerator > denominator) {
+        while(numerator == denominator) {
             numerator = numberGen(); 
         }
         
-        while(numerator2 == denominator2 || numerator2 > denominator2 || numerator2 > numerator) {
+        while(numerator2 == denominator2 || numerator2 > numerator) {
             numerator2 = numberGen(); 
         }
 
 
         Fraction fraction1 = new Fraction(numerator, denominator);
         Fraction fraction2 = new Fraction(numerator2, denominator2); 
-        //Fraction fraction3 = fraction1.addition(fraction2);
 
         System.out.println("Solve: " + coefficient + " " + fraction1.getNumerator() + "/" + fraction1.getDenominator() + " + "+coefficient2 + " " + fraction2.getNumerator() + "/" + fraction2.getDenominator()); 
 
@@ -85,49 +84,61 @@ public class Mixed_Fractions_Operations {
         //System.out.println("the gcd is: "+ gcd); 
 
         //users answer
-        System.out.println("Enter your answer (number/number format)");
+        System.out.println("Enter your answer (number/number format) and completely simplify!");
         String userAnswer = Program.input.nextLine(); 
 
         checkAnswer(correctNumerator, correctDenominator, userAnswer); 
     }
 
 
-    //these all still need to be converted 
     private static void sub() {
-        int numerator = numberGen() * 2; 
+        int numerator = numberGen(); 
         int denominator = numberGen(); 
         int numerator2 = numberGen(); 
         int denominator2 = numberGen(); 
+        int coefficient = (int)(Math.random()*7 + 3); 
+        int coefficient2 = (int)(Math.random()*7 + 1); 
 
         while(denominator == denominator2) {
             denominator2 = numberGen(); 
         }
         
-        while(numerator == denominator || numerator > denominator) {
-            numerator = numberGen() * 2; 
+        while(numerator == denominator) {
+            numerator = numberGen();
         }
         
-        while(numerator2 == denominator2 || numerator2 > denominator2 || numerator2 > numerator) {
+        while(numerator2 == denominator2 || numerator2 > numerator) {
             numerator2 = numberGen(); 
+        }
+
+        while(coefficient < coefficient2 || coefficient == coefficient2) {
+            coefficient2 = (int)(Math.random()*7 + 1); 
         }
         //replace all while loops to check for ALL conditions!! - I think this is fine for now 
 
         Fraction fraction1 = new Fraction(numerator, denominator);
         Fraction fraction2 = new Fraction(numerator2, denominator2); 
 
-        Fraction fraction3 = fraction1.subtraction(fraction2);
-        System.out.println("Solve: " + fraction1.getNumerator() + "/" + fraction1.getDenominator() + " - " + fraction2.getNumerator() + "/" + fraction2.getDenominator());
+        System.out.println("Solve: " + coefficient + " " + fraction1.getNumerator() + "/" + fraction1.getDenominator() + " - " + coefficient2 + " " + fraction2.getNumerator() + "/" + fraction2.getDenominator());
 
-        int correctNumerator = fraction3.getNumerator();
-        int correctDenominator = fraction3.getDenominator(); 
+        numerator += coefficient*denominator;
+        numerator2 += coefficient2*denominator2; 
+        Fraction fraction3 = fraction1.subtraction(fraction2);
+
+        int findCorrectNumerator = fraction3.getNumerator();
+        int findCorrectDenominator = fraction3.getDenominator(); 
+        int gcd = GCF.gcd(findCorrectNumerator, findCorrectDenominator); 
+
+        int correctNumerator = findCorrectNumerator / gcd; 
+        int correctDenominator = findCorrectDenominator / gcd; 
 
         System.out.println("Enter your answer (number/number format)");
-        Program.input.nextLine(); 
         String userAnswer = Program.input.nextLine(); 
 
         checkAnswer(correctNumerator, correctDenominator, userAnswer); 
     }
 
+    //the following need to be converted
     private static void mult() {
         int numerator = numberGen(); 
         int denominator = numberGen(); 
@@ -157,7 +168,6 @@ public class Mixed_Fractions_Operations {
         int correctDenominator = fraction3.getDenominator();
 
         System.out.println("Enter your answer (number/number format)");
-        Program.input.nextLine(); 
         String userAnswer = Program.input.nextLine(); 
 
         checkAnswer(correctNumerator, correctDenominator, userAnswer); 
