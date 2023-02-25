@@ -108,12 +108,14 @@ public class Place_Value {
         // Checks if the answer is valid or not and if not then asks the user again
         answer = spellChecker(answer);
         
+        System.out.println();
         // Checks the answer and the place value if it's correct
         if(places[placeValue].equals(answer)) {
             System.out.println("Correct!");
         }
         else {
             System.out.println("Incorrect :(");
+            System.out.println("The correct answer is " + answer);
         }
     }
 
@@ -125,6 +127,7 @@ public class Place_Value {
             for(int i = 0; i < places.length; i++) {
                 if(places[i].equals(answer)) {
                     spellChecker = false;
+                    break;
                 }
             }
         

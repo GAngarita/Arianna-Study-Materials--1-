@@ -4,7 +4,7 @@ public class Unlike_Demoninators_Operations {
 
         int userCutoff = 1;
         while (userCutoff == 1) {
-            System.out.println("Adding, Subtracting, Multiplying, and Dividing Uncommon Denominators");        
+            System.out.println("Adding, Subtracting, Multiplying, and Dividing Uncommon Denominators: ");        
             System.out.println();
             System.out.println("Pick a category:");
             System.out.println("1. Adding \n2. Subtracting\n3. Multiplying\n4. Dividing\n"); 

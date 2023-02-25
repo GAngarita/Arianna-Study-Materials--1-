@@ -4,7 +4,7 @@ public class GCF {
 
         int userCutoff = 1;
         while (userCutoff == 1) {
-            System.out.println("GCF");        
+            System.out.println("Greatest Common Factor: ");        
             System.out.println();
             
             generateRandomNumbers();

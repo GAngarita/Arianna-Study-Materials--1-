@@ -4,12 +4,13 @@ public class Variable_Operations {
 
         int userCutoff = 1;
         while (userCutoff == 1) {
-            System.out.println("Variable Operations");        
+            System.out.println("Variable Operations: ");        
             System.out.println();
             System.out.println("Pick a Category:");
             System.out.println("1. Addition\n2. Subtraction\n3. Distribution"); 
             int choice = Program.input.nextInt(); 
             Program.input.nextLine(); // clearing buffer!! 
+            System.out.println();
 
             category(choice); 
 
@@ -138,6 +139,7 @@ public class Variable_Operations {
         }
         else {
             System.out.println("Incorrect :("); 
+            System.out.println("The correct answer is " + x + "x + " + y + "y");
         }
 
     }

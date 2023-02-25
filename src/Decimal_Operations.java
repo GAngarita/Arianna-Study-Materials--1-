@@ -4,12 +4,13 @@ public class Decimal_Operations {
         // Randomly generated numbers and rounded decimals to hundredths place if neccessary and compares to the answer 
         int userCutoff = 1; 
         while (userCutoff == 1) {
-            System.out.println("Adding, Subtracting, Multiplying and Dividing Decimals:"); 
+            System.out.println("Adding, Subtracting, Multiplying and Dividing Decimals: "); 
             System.out.println();
             System.out.println("Pick a category:");
             System.out.println("1. Adding \n2. Subtracting\n3. Multiplying\n4. Dividing\n"); 
             int categoryChoice = Program.input.nextInt();
-            
+            System.out.println();
+
             category(categoryChoice);
            
             System.out.println("\nTo continue, enter 1\nTo return to the main menu, enter 0");
@@ -60,7 +61,7 @@ public class Decimal_Operations {
             double correct = variable1 + variable2; 
             correctOrIncorrect(correct, userAnswer); 
 
-            System.out.println("Would you like to try another?(1 for yes, 0 for no)");
+            System.out.println("Would you like to try another? Enter 1 for Yes, 0 for No");
             userCutoff = Program.input.nextInt(); 
         }
     }
@@ -100,7 +101,7 @@ public class Decimal_Operations {
             System.out.println("The corrext answer is: "+correct); 
             correctOrIncorrect(correct, userAnswer); 
 
-            System.out.println("Would you like to try another? (1 for yes, 0 for no)"); 
+            System.out.println("Would you like to try another? Enter 1 for Yes, 0 for No");
             userCutoff = Program.input.nextInt(); 
         }
 
@@ -130,7 +131,7 @@ public class Decimal_Operations {
 
             correctOrIncorrect(correct, userAnswer);
 
-            System.out.println("Would you like to try another? (1 for yes, 0 for no)");
+            System.out.println("Would you like to try another? Enter 1 for Yes, 0 for No");
             userCutoff = Program.input.nextInt(); 
         }
     }
@@ -168,7 +169,7 @@ public class Decimal_Operations {
             System.out.println("correct answer is " + correct);
             correctOrIncorrect(correct, userAnswer);
 
-            System.out.println("Would you like to try another? (1 for yes, 0 for no)"); 
+            System.out.println("Would you like to try another? Enter 1 for Yes, 0 for No");
             userCutoff = Program.input.nextInt(); 
         }
 
@@ -176,11 +177,13 @@ public class Decimal_Operations {
 
     //checks user answers to the correct answer of the problem
     private static void correctOrIncorrect(double correctAns, double userAns) {
+        System.out.println();
         if(userAns == correctAns) {
             System.out.println("Correct!"); 
         }
         else {
             System.out.println("Incorrect :("); 
+            System.out.println("The correct answer is " + correctAns);
         }
     }
 
