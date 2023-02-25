@@ -82,12 +82,12 @@ public class Mixed_Fractions_Operations {
         int correctDenominator = findCorrectDenominator / gcd; 
 
         //debugging 
-        System.out.println("the gcd is: "+ gcd); 
+        //System.out.println("the gcd is: "+ gcd); 
 
         //users answer
         System.out.println("Enter your answer (number/number format)");
         String userAnswer = Program.input.nextLine(); 
-        
+
         checkAnswer(correctNumerator, correctDenominator, userAnswer); 
     }
 
@@ -110,7 +110,7 @@ public class Mixed_Fractions_Operations {
         while(numerator2 == denominator2 || numerator2 > denominator2 || numerator2 > numerator) {
             numerator2 = numberGen(); 
         }
-        //replace all while loops to check for ALL conditions!! 
+        //replace all while loops to check for ALL conditions!! - I think this is fine for now 
 
         Fraction fraction1 = new Fraction(numerator, denominator);
         Fraction fraction2 = new Fraction(numerator2, denominator2); 
